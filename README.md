@@ -37,10 +37,14 @@ The goal of this lab is to **develop practical IAM, system administration, and t
                                                └── CL01
 
 
+
 This architecture demonstrates both:
 
-• **Traditional enterprise identity (Active Directory)**  
-• **Modern cloud identity (Microsoft Entra ID)**
+Traditional enterprise identity using Active Directory Domain Services
+
+Modern cloud identity using Microsoft Entra ID
+
+Hybrid identity synchronization between on-prem and cloud environments
 
 ---
 
