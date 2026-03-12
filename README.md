@@ -16,24 +16,25 @@ The goal of this lab is to **develop practical IAM, system administration, and t
 
 ---
 
-Client Workstation
-└── CL01
-    │
-    │ Kerberos Authentication
-    │
-Domain Controllers
-├── DC01 (Core)
-└── DC02 (GUI)
-    │
-    │ Identity & Access Management
-    │
-File Server
-└── FS01
-    │
-    │ Hybrid Identity (Phase 8+)
-    │
-Microsoft Entra ID
-└── Tenant: simmonsalanproton.onmicrosoft.com
+                         Internet / SaaS Applications
+                                   │
+                                   │  SSO (SAML / OAuth / OIDC)
+                                   ▼
+                     Microsoft Entra ID (Identity Provider)
+                     simmonsalanproton.onmicrosoft.com
+                                   │
+                                   │  Entra Connect (Phase 9)
+                                   ▼
+                      Active Directory Domain — corp.local
+                                   │
+                 ┌─────────────────┴─────────────────┐
+                 │                                   │
+            Domain Controllers                   File Services
+           ├── DC01 (Core)                      └── FS01
+           └── DC02 (GUI)                          │
+                                                    │
+                                               Client Access
+                                               └── CL01
 
 
 This architecture demonstrates both:
