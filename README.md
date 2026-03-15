@@ -12,20 +12,41 @@ This project simulates a **real corporate identity environment** combining:
 - Identity synchronization and SSO
 - Authentication monitoring and troubleshooting
 
+  ## Cloud Identity & Zero Trust Controls
+
+The lab also demonstrates modern cloud identity security using Microsoft Entra ID.
+
+Key capabilities implemented:
+
+• Conditional Access policies  
+• Privileged Identity Management (PIM)  
+• Identity Protection risk detection  
+• Risk-based MFA enforcement  
+
+These controls simulate a modern **Zero Trust identity architecture** used in enterprise environments.
+
 The goal of this lab is to **develop practical IAM, system administration, and troubleshooting skills** using technologies found in modern enterprise environments.
 
 ---
 
-                         Internet / SaaS Applications
-                                   │
-                                   │  SSO (SAML / OAuth / OIDC)
-                                   ▼
-                     Microsoft Entra ID (Identity Provider)
-                     simmonsalanproton.onmicrosoft.com
-                                   │
-                                   │  Entra Connect (Phase 9)
-                                   ▼
-                      Active Directory Domain — corp.local
+                       Internet / SaaS Applications
+           │
+           │  SSO (SAML / OAuth / OIDC)
+           ▼
+   Microsoft Entra ID
+   simmonslab.onmicrosoft.com
+           │
+ ┌───────────────────────────┐
+ │ Identity Security Layer   │
+ │                           │
+ │ • Conditional Access      │
+ │ • Identity Protection     │
+ │ • Privileged Identity Mgmt│
+ └───────────────────────────┘
+           │
+           │ Entra Connect (Phase 9)
+           ▼
+ Active Directory Domain — corp.local
                                    │
                  ┌─────────────────┴─────────────────┐
                  │                                   │
@@ -91,6 +112,15 @@ Detailed labs are located in the `/docs` folder.
 | 06 | Group Policy & Security Controls |
 | 07 | Identity Hardening |
 | 08 | Microsoft Entra ID Tenant Setup |
+### Entra Identity Security Labs
+
+08.4 Conditional Access (Admin MFA)
+
+08.5 Privileged Identity Management (PIM)
+
+08.6 Identity Protection
+
+08.7 Risk-Based Conditional Access
 | 09 | Hybrid Identity with Entra Connect |
 | 10 | SSO and Federation |
 
