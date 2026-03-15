@@ -28,7 +28,46 @@ These controls simulate a modern **Zero Trust identity architecture** used in en
 The goal of this lab is to **develop practical IAM, system administration, and troubleshooting skills** using technologies found in modern enterprise environments.
 
 ---
+## Hybrid Identity Architecture
 
+```
+Internet / SaaS Applications
+           │
+           │  SSO (SAML / OAuth / OIDC)
+           ▼
+   Microsoft Entra ID
+   simmonslab.onmicrosoft.com
+           │
+ ┌─────────────────────────────┐
+ │   Identity Security Layer   │
+ │                             │
+ │  • Conditional Access       │
+ │  • Identity Protection      │
+ │  • Privileged Identity Mgmt │
+ └─────────────────────────────┘
+           │
+           │  Entra Connect (Phase 9)
+           ▼
+
+====================================================
+          On-Prem Infrastructure (corp.local)
+====================================================
+
+Active Directory Domain — corp.local
+           │
+    ┌───────────────┐        ┌───────────────┐
+    │ Domain        │        │ File Services │
+    │ Controllers   │        │               │
+    │               │        │ FS01          │
+    │ DC01 (Core)   │        │               │
+    │ DC02 (GUI)    │        │               │
+    └───────────────┘        └───────────────┘
+            │
+            ▼
+        Client Access
+            │
+            └── CL01
+```
 
 This architecture demonstrates both:
 
