@@ -10,6 +10,18 @@ Location:
 
 Service principal sign-in logs were delayed and did not appear during the test window.
 
+## ✅ Sign-In Log Validation
+
+A successful service principal sign-in was captured.
+
+This confirms:
+- Authentication flow executed correctly
+- Token request was processed by Entra ID
+- Activity is logged and traceable
+
+## 🔐 Security Insight
+Even non-human identities (AI, apps, automation) generate sign-in logs and should be monitored just like user accounts.
+
 ## ✅ Validation Method
 
 Authentication was confirmed through:

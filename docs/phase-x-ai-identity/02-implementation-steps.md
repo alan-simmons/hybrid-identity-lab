@@ -41,13 +41,34 @@ Denied:
 
 ## Step 6 — Authenticate (OAuth Client Credentials)
 
-```bash
+ bash
 curl -X POST https://login.microsoftonline.com/<tenant-id>/oauth2/v2.0/token \
 -H "Content-Type: application/x-www-form-urlencoded" \
 -d "client_id=<client-id>" \
 -d "client_secret=<secret>" \
 -d "scope=https://graph.microsoft.com/.default" \
 -d "grant_type=client_credentials" 
-Step 7 — Token Received
+
+
+## Step 7 — Token Received
 
 This confirms successful authentication using the OAuth 2.0 client credentials flow.
+
+
+
+## Step 8  — Sign-In Log Validation
+
+![Sign-In Log](../../screenshots/phase-x-ai-identity/05-service-principal-sign-in-success.png)
+
+A successful sign-in was recorded for the service principal.
+
+Details:
+- Authentication type: Client credentials
+- Status: Success
+- No user interaction involved
+
+This confirms that the AI identity successfully authenticated and accessed Microsoft Entra ID.
+
+
+
+
