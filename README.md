@@ -110,7 +110,11 @@ Hybrid identity synchronization between on-prem and cloud environments
 
 # Lab Documentation
 
+## Lab Documentation
+
 Detailed labs are located in the `/docs` folder.
+
+### 🧱 Core Infrastructure Phases
 
 | Phase | Topic |
 |------|------|
@@ -121,18 +125,48 @@ Detailed labs are located in the `/docs` folder.
 | 05 | DC Locator & DNS Behavior |
 | 06 | Group Policy & Security Controls |
 | 07 | Identity Hardening |
-| 08 | Microsoft Entra ID Tenant Setup |
-### Entra Identity Security Labs
 
-08.4 Conditional Access (Admin MFA)
+---
 
-08.5 Privileged Identity Management (PIM)
+### ☁️ Microsoft Entra ID & Identity Security
 
-08.6 Identity Protection
+| Phase | Topic |
+|------|------|
+| 08.1 | Entra ID Tenant Setup |
+| 08.2 | Identity Objects & Structure |
+| 08.3 | Authentication Fundamentals |
 
-08.7 Risk-Based Conditional Access
+---
+
+### 🔐 Entra Identity Security Labs (Zero Trust)
+
+| Phase | Topic |
+|------|------|
+| 08.4 | Conditional Access (Admin MFA) |
+| 08.5 | Privileged Identity Management (PIM) |
+| 08.6 | Identity Protection |
+| 08.7 | Risk-Based Conditional Access |
+
+---
+
+### 🚀 Advanced Identity Security (NEW)
+
+| Phase | Topic |
+|------|------|
+| 08.12 | Authentication Methods & Passwordless |
+| 08.13 | Sign-in Logs & Conditional Access Validation |
+| 08.14 | Location-Based Conditional Access (Zero Trust) |
+| 08.15 | Multi-Location Sign-in Analysis (Impossible Travel Simulation) |
+| 08.16 | MFA Fatigue Attack Simulation *(In Progress)* |
+
+---
+
+### 🔗 Hybrid Identity (Upcoming)
+
+| Phase | Topic |
+|------|------|
 | 09 | Hybrid Identity with Entra Connect |
-| 10 | SSO and Federation |
+| 10 | SSO and Federation (SAML / OIDC) |
 
 ---
 

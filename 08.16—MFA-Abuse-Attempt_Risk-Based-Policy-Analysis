@@ -1,0 +1,98 @@
+## 🧱 Phase 08.16 — MFA Abuse Attempt & Risk-Based Policy Analysis
+
+### 🎯 Objective
+Attempt to simulate MFA fatigue (push bombing) and evaluate how Microsoft Entra ID handles repeated authentication attempts and risk-based Conditional Access policies.
+
+---
+
+### 🔧 Scenario
+
+Multiple authentication attempts were initiated for the same user (CloudUser2) in a short time window to simulate an MFA fatigue attack pattern.
+
+The goal was to:
+- Generate repeated MFA prompts
+- Observe authentication behavior
+- Trigger risk-based detection (Entra ID P2)
+- Analyze how Conditional Access responds
+
+---
+
+### 🧪 Observations
+
+- Initial login attempt:
+  - MFA prompt triggered successfully
+  - Authentication completed normally
+
+- Subsequent login attempts:
+  - Did not consistently generate additional MFA prompts
+  - In some cases forced password re-entry
+  - Occasionally resulted in authentication errors (e.g., "Something went wrong")
+
+- Sign-in logs:
+  - Did not capture all attempted authentication flows
+  - Primarily recorded completed or near-complete authentication events
+
+- Risk detection:
+  - No "Risky sign-in" events were generated
+  - Risk-based Conditional Access policies were not triggered
+
+---
+
+### 🧠 Analysis
+
+The environment did not fully replicate MFA fatigue behavior due to built-in protections and authentication flow controls within Microsoft Entra ID.
+
+Additionally, risk detection did not trigger because:
+- Login attempts originated from similar geographic locations
+- IP reputation remained low risk
+- No known malicious or anomalous signals were present
+
+This demonstrates that risk detection relies on Microsoft’s threat intelligence and behavioral analysis rather than simple repeated login attempts.
+
+---
+
+### 🧠 Key Learning
+
+MFA abuse scenarios cannot always be reliably reproduced in a controlled lab environment.
+
+Standard authentication behavior and logging may:
+- Limit repeated MFA prompts
+- Prevent abuse patterns from forming
+- Omit incomplete authentication attempts from logs
+
+---
+
+### 🔥 Real-World Insight
+
+This lab reinforced the distinction between:
+
+- **Preventive controls** (Conditional Access policies)
+- **Detective controls** (risk-based sign-in analysis)
+
+While Conditional Access policies are fully controllable and enforceable, risk detection depends on external signals such as:
+- IP reputation
+- Geographic anomalies
+- Threat intelligence data
+
+---
+
+### ⚠️ Security Insight
+
+Strong authentication policies and Conditional Access configurations can reduce the effectiveness of MFA fatigue attacks by:
+
+- Limiting repeated prompt generation
+- Enforcing authentication strength requirements
+- Restricting access based on contextual conditions (e.g., location)
+
+---
+
+### 💡 Reflection
+
+Although a full MFA fatigue attack could not be reproduced, this lab strengthened understanding of:
+
+- Authentication flow behavior in Entra ID
+- Limitations of standard logging
+- How risk-based policies depend on external signals
+- The relationship between enforcement and detection mechanisms
+
+This experience reinforced a deeper understanding of identity security architecture and real-world IAM behavior.
