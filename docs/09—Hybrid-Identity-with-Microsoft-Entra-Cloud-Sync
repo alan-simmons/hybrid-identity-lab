@@ -1,3 +1,6 @@
+
+
+
 ## 🧱 Phase 09 — Hybrid Identity with Microsoft Entra Cloud Sync
 
 ### 🎯 Objective
@@ -208,4 +211,6 @@ Successfully built a hybrid identity environment where:
 
 - Test hybrid login (synced user authentication)
 - Enable Seamless SSO
-- Introduce device-based Conditional Access (Intune)
+- Introduce device-based Conditional Access (Intune) 
+
+---
